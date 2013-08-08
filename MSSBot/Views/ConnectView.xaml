@@ -1,0 +1,17 @@
+﻿<UserControl x:Class="MSSBot.Views.ConnectView"
+			 xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+			 xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+			 xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+			 xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+			 mc:Ignorable="d" 
+			 d:DesignHeight="300" d:DesignWidth="300">
+	<DockPanel>
+		<TextBlock DockPanel.Dock="Top" Text="Port #:" HorizontalAlignment="Center"/>
+		<TextBox DockPanel.Dock="Top" Text="{Binding Port, UpdateSourceTrigger=PropertyChanged}" Height="20" Width="100"/>
+		<Button DockPanel.Dock="Top" Content="{Binding ConnectButtonContent}"
+				Command="{Binding ConnectCommand}" Width="100"/>
+		<Border BorderBrush="LightGray" CornerRadius="3" BorderThickness="3">
+			<TextBlock Text="{Binding Log}"/>
+		</Border>
+	</DockPanel>
+</UserControl>

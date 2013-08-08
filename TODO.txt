@@ -1,0 +1,3 @@
+Due date: August 10th
+MSSBot (Iteration1)
+- Move holdem_satate and holdem_player structure layout to a config file
