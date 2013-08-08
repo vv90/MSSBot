@@ -80,26 +80,10 @@ namespace MSSBot.ViewModels
 		}
 
 		void OnMessageReceived(byte[] receivedData)
-		{
-			StringBuilder sb = new StringBuilder();
-			int count = 0;
-
-			for(int i = 0; i < 552; i++)
-			{
-				sb.Append(string.Format("0x{0:X}, ", receivedData[i]));
-				if (i % 16 == 15)
-					sb.Append("\n");
-			}
-
-			File.WriteAllText("data.txt", sb.ToString());
-
-			using (FileStream stream = File.Create("data"))
-				stream.Write(receivedData, 0, 552);
-
+		{	
 			HoldemState receivedState = new HoldemState(receivedData);
-			Log += receivedState.TableTitle;
-			
-			Log += "\n";
+
+			Log += string.Format("{0}\n", receivedState);
 		}
 
 		void ConnectCommandExecute()
