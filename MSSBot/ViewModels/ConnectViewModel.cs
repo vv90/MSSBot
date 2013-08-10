@@ -23,6 +23,7 @@ namespace MSSBot.ViewModels
 			OnConnectedChanged();
 			this.connection.ConnectedChanged += (s, e) => OnConnectedChanged();
 			this.connection.MessageReceived += (s, e) => OnMessageReceived(e.ReceivedData);
+			this.connection.ConnectionLost += (s, e) => connection.Connect(Port);
 
 			Port = 4444;
 		}
@@ -84,6 +85,7 @@ namespace MSSBot.ViewModels
 			HoldemState receivedState = new HoldemState(receivedData);
 
 			Log += string.Format("{0}\n", receivedState);
+			connection.Send(new AutoplayerInstruction(AutoplayerAction.Fold, -1, 0));
 		}
 
 		void ConnectCommandExecute()

@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<TestRun id="0da72eaa-c9fe-4d1a-8c23-4f803cbef713" name="cappuccino@CAPPUCCINO-PC 2013-08-10 18:44:14" runUser="cappuccino-PC\cappuccino" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <TestSettings name="Local" id="9fd2bc07-e5f6-4073-9b19-7db513d1cd40">
+    <Description>These are default test settings for a local test run.</Description>
+    <Deployment enabled="false" runDeploymentRoot="cappuccino_CAPPUCCINO-PC 2013-08-10 18_44_14">
+      <DeploymentItem filename="D:\Dropbox\Projects\MSSBot\OHConnectivity\bin\Debug\OHConnectivity.dll" />
+    </Deployment>
+    <Execution>
+      <TestTypeSpecific />
+      <AgentRule name="Execution Agents">
+      </AgentRule>
+    </Execution>
+  </TestSettings>
+  <Times creation="2013-08-10T18:44:14.3110114+07:00" queuing="2013-08-10T18:44:14.8010124+07:00" start="2013-08-10T18:44:14.8820153+07:00" finish="2013-08-10T18:44:15.3645295+07:00" />
+  <ResultSummary outcome="Completed">
+    <Counters total="1" executed="1" passed="1" error="0" failed="0" timeout="0" aborted="0" inconclusive="0" passedButRunAborted="0" notRunnable="0" notExecuted="0" disconnected="0" warning="0" completed="0" inProgress="0" pending="0" />
+  </ResultSummary>
+  <TestDefinitions>
+    <UnitTest name="TestPack" storage="d:\dropbox\projects\mssbot\ohconnectivitytest\bin\debug\ohconnectivitytest.dll" id="b265133e-6217-906a-c3cc-97518d794c1c">
+      <Execution id="7d8726e0-3eab-48ea-bca5-caecbdc89ccf" />
+      <TestMethod codeBase="D:/Dropbox/Projects/MSSBot/OHConnectivityTest/bin/Debug/OHConnectivityTest.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="OHConnectivityTest.AutoplayerInstructionTest, OHConnectivityTest, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="TestPack" />
+    </UnitTest>
+  </TestDefinitions>
+  <TestLists>
+    <TestList name="Results Not in a List" id="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestList name="All Loaded Results" id="19431567-8539-422a-85d7-44ee4e166bda" />
+  </TestLists>
+  <TestEntries>
+    <TestEntry testId="b265133e-6217-906a-c3cc-97518d794c1c" executionId="7d8726e0-3eab-48ea-bca5-caecbdc89ccf" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+  </TestEntries>
+  <Results>
+    <UnitTestResult executionId="7d8726e0-3eab-48ea-bca5-caecbdc89ccf" testId="b265133e-6217-906a-c3cc-97518d794c1c" testName="TestPack" computerName="CAPPUCCINO-PC" duration="00:00:00.0162722" startTime="2013-08-10T18:44:14.9300180+07:00" endTime="2013-08-10T18:44:15.2775269+07:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="7d8726e0-3eab-48ea-bca5-caecbdc89ccf">
+    </UnitTestResult>
+  </Results>
+</TestRun>

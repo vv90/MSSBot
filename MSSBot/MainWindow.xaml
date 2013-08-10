@@ -12,5 +12,6 @@
 			<v:ConnectView Grid.Column="0"/>
 		</Border>
 		<GridSplitter Grid.Column="0" HorizontalAlignment="Right" Width="3" Background="Gray"/>
+		<v:RangeStringInputView Grid.Column="1"></v:RangeStringInputView>
 	</Grid>
 </Window>

@@ -59,8 +59,12 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="ViewModels\ConnectViewModel.cs" />
+    <Compile Include="ViewModels\RangeStringInputViewModel.cs" />
     <Compile Include="Views\ConnectView.xaml.cs">
       <DependentUpon>ConnectView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\RangeStringInputView.xaml.cs">
+      <DependentUpon>RangeStringInputView.xaml</DependentUpon>
     </Compile>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
@@ -75,6 +79,10 @@
       <SubType>Code</SubType>
     </Compile>
     <Page Include="Views\ConnectView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\RangeStringInputView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -107,6 +115,10 @@
     <ProjectReference Include="..\OHConnectivity\OHConnectivity.csproj">
       <Project>{E7267316-1ED9-410B-971D-ABB15C4085D2}</Project>
       <Name>OHConnectivity</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Strategy\BotLogic.csproj">
+      <Project>{836A8D52-4E75-483C-AA1C-F434666E1982}</Project>
+      <Name>BotLogic</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

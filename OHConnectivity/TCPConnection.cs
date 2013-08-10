@@ -12,6 +12,7 @@ namespace OHConnectivity
 	{
 		public event EventHandler<MessageReceivedEventArgs> MessageReceived;
 		public event EventHandler ConnectedChanged;
+		public event EventHandler ConnectionLost;
 
 		static TCPConnection instance;
 		Socket socket;
@@ -131,12 +132,32 @@ namespace OHConnectivity
 			}
 			catch (ObjectDisposedException)
 			{ }
+			catch (SocketException)
+			{
+				if (ConnectionLost != null)
+					ConnectionLost(this, EventArgs.Empty);
+			}
 			catch (Exception ex)
 			{
 				MessageBox.Show(ex.Message, "OnReceive failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
 			}
 
 			IsConnected = socket.Connected;
+		}
+
+		public void Send(AutoplayerInstruction instruction)
+		{
+			byte[] data = instruction.Pack();
+
+			try
+			{
+				socket.Send(data);
+
+			}
+			catch (Exception ex)
+			{
+				MessageBox.Show(ex.Message,"Send failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
+			}
 		}
 	}
 
